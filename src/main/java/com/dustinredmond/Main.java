@@ -203,6 +203,12 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) {
-        Application.launch(args);
+        if (args.length > 0) {
+            for (String arg: args) {
+                System.out.println(BCrypt.hashpw(arg, BCrypt.gensalt()));
+            }
+        } else {
+            Application.launch(args);
+        }
     }
 }
