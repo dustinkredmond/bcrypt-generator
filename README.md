@@ -10,3 +10,10 @@ algorithm, this makes efforts to crack it futile, as computers get faster, we ca
 iterations to make it more and more difficult for would-be attackers. 
 
 ![](./img/ui.png)
+
+BCrypt generator, apart from the UI, also supports passing multiple plain-text passwords as arguments:
+E.g.
+```
+  java -jar bcrypt-generator.jar somePassword anotherPassword
+```
+BCrypt Generator will hash the arguments and print them to standard out.
