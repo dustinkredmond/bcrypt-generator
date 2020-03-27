@@ -21,6 +21,8 @@
 import com.dustinredmond.BCrypt;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 /**
  * @author Dustin K. Redmond
  * @since 03/26/2020 14:40
@@ -34,6 +36,6 @@ public class BCryptGeneratorTest {
     public void testBCrypt() {
         String plainText = "abc12345";
         String hashedPass = BCrypt.hashpw(plainText, BCrypt.gensalt());
-        assert BCrypt.checkpw(plainText, hashedPass);
+        assertTrue(BCrypt.checkpw(plainText, hashedPass));
     }
 }
