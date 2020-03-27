@@ -23,3 +23,5 @@ BCrypt Generator will hash the arguments and print them to standard out.
 The most recently committed code changes are packaged into an executable jar via Apache Maven,
 the most recent version is available for download under ./bin/BCryptGenerator.jar or [click here](./bin/BCryptGenerator.jar)
 to download the executable JAR.
+
+Or, if you prefer to build from source, simply run `mvn package` from the project's root directory. You can find the packaged JAR file in the `bin` directory after successful completion.
