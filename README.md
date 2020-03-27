@@ -17,3 +17,9 @@ E.g.
   java -jar bcrypt-generator.jar somePassword anotherPassword
 ```
 BCrypt Generator will hash the arguments and print them to standard out.
+
+## Download
+
+The most recently committed code changes are packaged into an executable jar via Apache Maven,
+the most recent version is available for download under ./bin/BCryptGenerator.jar or [click here](./bin/BCryptGenerator.jar)
+to download the executable JAR.
