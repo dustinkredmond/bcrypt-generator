@@ -150,6 +150,8 @@ public class Main extends Application {
         }
 
         String hashedPass = BCrypt.hashpw(pass, BCrypt.gensalt(numRounds));
+        // Not wrapping in runLater call causes crash on some systemss when 
+        // large number of hashing rounds are used
         Platform.runLater(() -> result.setText(hashedPass));
     }
 
