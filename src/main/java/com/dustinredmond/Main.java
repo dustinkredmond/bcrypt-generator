@@ -123,7 +123,7 @@ public class Main extends Application {
     }
 
     private void validateAndDisplay(String pass, String confirm, TextField result, String rounds) {
-        if (pass.isEmpty() || confirm.isEmpty()) {
+        if (pass == null || confirm == null || pass.isEmpty() || confirm.isEmpty()) {
             showAlert("Please fill out all fields.");
             return;
         }
