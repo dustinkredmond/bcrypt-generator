@@ -128,7 +128,7 @@ public class Main extends Application {
             return;
         }
         if (!pass.equals(confirm)){
-            showAlert("Passwords do not match!");
+            showAlert("Passwords do not match.");
             return;
         }
         if (rounds == null || rounds.isEmpty()) {
@@ -152,7 +152,10 @@ public class Main extends Application {
         String hashedPass = BCrypt.hashpw(pass, BCrypt.gensalt(numRounds));
         // Not wrapping in runLater call causes crash on some *nix systems when 
         // large number of hashing rounds are used, not a known bug, so better to
-        // be safe than sorry
+        // be safe than sorry.
+        //
+        // EDIT: I actually can't reproduce this crash now, maybe it was fault
+        // of hardware or faulty Java install? Leaving runLater, it won't hurt
         Platform.runLater(() -> result.setText(hashedPass));
     }
 
