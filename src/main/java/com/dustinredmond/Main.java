@@ -104,7 +104,7 @@ public class Main extends Application {
 
         buttonMatch.setOnAction(e -> {
             if (textFieldPlainText.getText().isEmpty() || textFieldHashed.getText().isEmpty()) {
-                showAlert("Please fill out all fields.");
+                showAlert("Please fill out both password fields.");
                 return;
             }
 
