@@ -33,6 +33,8 @@ public class Main extends Application {
         grid.setPadding(new Insets(10, 10, 10, 10));
         grid.setPrefSize(500, 150);
 
+        // Keep an index for GridPane, avoids having to renumber
+        // each control if we add/modify the layout
         int rowIndex = 0;
 
         Text text = new Text("Generate Hash");
@@ -128,7 +130,7 @@ public class Main extends Application {
             return;
         }
         if (!pass.equals(confirm)){
-            showAlert("Passwords do not match.");
+            showAlert("Entered passwords do not match.");
             return;
         }
         if (rounds == null || rounds.isEmpty()) {
