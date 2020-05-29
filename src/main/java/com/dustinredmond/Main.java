@@ -17,7 +17,9 @@ import javafx.scene.paint.Paint;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-
+/**
+ * Main class for BCryptGenerator extending JavaFX Application (runnable)
+ */
 public class Main extends Application {
 
     @Override
@@ -130,7 +132,7 @@ public class Main extends Application {
             return;
         }
         if (!pass.equals(confirm)){
-            showAlert("Entered passwords do not match.");
+            showAlert("The passwords you entered do not match.");
             return;
         }
         if (rounds == null || rounds.isEmpty()) {
@@ -143,7 +145,7 @@ public class Main extends Application {
         try {
             numRounds = Integer.parseInt(rounds);
         } catch (Exception e) {
-            showAlert("Please enter a whole number for the number of hashing rounds.");
+            showAlert("Please enter a whole number (integer) for the number of hashing rounds.");
             return;
         }
 
