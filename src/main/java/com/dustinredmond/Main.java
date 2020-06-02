@@ -213,6 +213,8 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) {
+        // If arguments are supplied, output the hashed argument(s)
+        // to standard out, otherwise launch the GUI
         if (args.length > 0) {
             for (String arg: args) {
                 System.out.println(BCrypt.hashpw(arg, BCrypt.gensalt()));
