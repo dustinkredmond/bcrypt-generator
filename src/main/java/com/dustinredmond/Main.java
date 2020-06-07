@@ -207,6 +207,7 @@ public class Main extends Application {
                     "    Icons provided by Icons8 <https://icons8.com/> (https://icons8.com/icons/set/lock-2)");
             grid.add(textAttributions, 0, 1);
             stage.setScene(new Scene(grid));
+            stage.sizeToScene();
             stage.show();
         });
         return mb;
