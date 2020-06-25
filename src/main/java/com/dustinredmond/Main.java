@@ -185,7 +185,7 @@ public class Main extends Application {
             grid.setPadding(new Insets(10));
             grid.setHgap(5);
             grid.setVgap(10);
-            Text textLicense = new Text("    BCrypt Hash Generator: Generate and validate BCrypt hashes" +
+            Label textLicense = new Label("    BCrypt Hash Generator: Generate and validate BCrypt hashes" +
                     "\n"+
                     "    Copyright (C) 2020  Dustin K. Redmond\n" +
                     "\n" +
